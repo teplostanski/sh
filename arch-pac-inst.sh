@@ -13,8 +13,17 @@ while true; do
     echo ""
     echo ""
     echo ""
-    read -p "Установить XORG? [Y/n]
-1 - Установить XORG | 2 - Посмотреть есть ли файл .xinitrc | 3 - Создать файл .xinitrc | 0 - Выход:  " yn
+    read -p "Установить XORG?
+
+1 - Установить XORG
+
+2 - Посмотреть есть ли файл .xinitrc
+
+3 - Создать файл .xinitrc
+
+0 - Выход
+
+: " yn
     case $yn in
         [1]* ) cd /tmp
         echo "┌─────────────────────────────────────────────────────────────────────────────┐"
@@ -37,7 +46,7 @@ while true; do
         echo "┌─────────────────────────────────────────────────────────────────────────────┐"
 				echo "│                                     ГОТОВО!                                 │"
 				echo "└─────────────────────────────────────────────────────────────────────────────┘";;
-        [0]* ) exit;;
+        [0]* ) break;;
         * ) echo "Выбери 1 2 3 или 0"
     esac
 done
@@ -83,10 +92,16 @@ while true; do
     echo ""
     echo ""
     echo ""
-    read -p "Установить chaotic aur? [Y/n]
-Yes по умолчанию: " yn
+    read -p "Установить chaotic aur? По умолчанию 1
+1 - Установка CHAOTIC AUR и ДОУСТАНОВКА ПАКЕТОВ pamac-aur autotiling vscodium vscodium-marketplace qxkb librewolf
+
+2 - ДОУСТАНОВКА ПАКЕТОВ pamac-aur autotiling vscodium vscodium-marketplace qxkb librewolf
+
+0 - Выход
+
+: " yn
     case $yn in
-        [Yy]* ) cd /tmp
+        [1]* ) cd /tmp
         echo "┌─────────────────────────────────────────────────────────────────────────────┐"
 				echo "│                               УСТАНОВКА CHAOTIC AUR                         │"
 				echo "└─────────────────────────────────────────────────────────────────────────────┘"
@@ -102,7 +117,7 @@ Yes по умолчанию: " yn
 				sudo pacman -S librewolf --noconfirm
 				yay -S qxkb --noconfirm
 				yay -S vscodium-marketplace --noconfirm; break;;
-        [Nn]* ) cd
+        [2]* ) cd
         echo "┌─────────────────────────────────────────────────────────────────────────────┐"
 				echo "│                               ДОУСТАНОВКА ПАКЕТОВ                           │"
 				echo "└─────────────────────────────────────────────────────────────────────────────┘"
@@ -128,7 +143,8 @@ Yes по умолчанию: " yn
 				sudo pacman -S librewolf --noconfirm
 				yay -S qxkb --noconfirm
 				yay -S vscodium-marketplace --noconfirm; break;;
-        * ) echo "Напиши (Y)es или (N)o"
+				[0]* ) break;;
+        * ) echo "Выбери 1 2 3 или 0"
     esac
 done
 echo "┌─────────────────────────────────────────────────────────────────────────────┐"
