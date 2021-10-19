@@ -1,19 +1,21 @@
 #!/bin/sh
 while true; do
 	echo "------------------------------------------------------------------------------"
-    echo "Скрипт русификации системы и клавиатуры | The script of Russification of the system and keyboard v1.1"
-    echo ""
-    echo "Сейчас откроется файл | The file will open now /etc/locale.gen"
-    echo "Нужно найти и расскоментировать (убрать в начале #) строки: | You need to find and uncomment (remove at the beginning of #) the lines:"
-		echo "en_US.UTF-8 UTF-8"
-		echo "ru_RU.UTF-8 UTF-8"
-    echo ""
-    read -p "Продолжить? | Continue?
+  echo "Скрипт русификации системы и клавиатуры | The script of Russification of the"
+  echo "system and keyboard v1.1"
+  echo ""
+  echo "Сейчас откроется файл | The file will open now /etc/locale.gen"
+  echo "Нужно найти и расскоментировать (убрать в начале #) строки: | You need to find"
+  echo "and uncomment (remove at the beginning of #) the lines:"
+	echo "en_US.UTF-8 UTF-8"
+	echo "ru_RU.UTF-8 UTF-8"
+  echo ""
+  read -p "Продолжить? | Continue?
 
 1 - Да | Yes
 
 0 - Выход | Exit
-echo "------------------------------------------------------------------------------"
+------------------------------------------------------------------------------
 : " yn
     case $yn in
         [1]* ) sudo pacman -Syy
