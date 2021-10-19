@@ -1,7 +1,7 @@
 #!/bin/sh
 while true; do
 	echo "------------------------------------------------------------------------------"
-    echo "Скрипт русификации системы и клавиатуры | The script of Russification of the system and keyboard v1.0"
+    echo "Скрипт русификации системы и клавиатуры | The script of Russification of the system and keyboard v1.1"
     echo ""
     echo "Сейчас откроется файл | The file will open now /etc/locale.gen"
     echo "Нужно найти и расскоментировать (убрать в начале #) строки: | You need to find and uncomment (remove at the beginning of #) the lines:"
@@ -29,7 +29,8 @@ while true; do
 				#localectl set-keymap --no-convert ruwin_alt_sh-UTF-8
 				# И сохраняем шрифт
 				#echo 'FONT="ter-v20b"' >> /etc/vconsole.conf
-        [0]* ) exit;;
+        [0]* ) clear
+	exit;;
         * ) echo "Выбери 1 или 0 | Choose 1 or 0"
     esac
 done
