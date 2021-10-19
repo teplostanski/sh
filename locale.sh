@@ -16,12 +16,14 @@ while true; do
 
 : " yn
     case $yn in
-        [1]* ) sudo pacman -S nano --noconfirm
+        [1]* ) sudo pacman -Syy
+	sudo pacman -S nano --noconfirm
+	sudo pacman -S terminus-font --noconfirm
         sudo nano /etc/locale.gen
         locale-gen
         localectl set-locale LANG=en_US.UTF-8
         loadkeys ruwin_alt_sh-UTF-8
-        setfont ter-v20b
+        setfont cyr-sun16
         echo 'KEYMAP="ruwin_alt_sh-UTF-8"' >> /etc/vconsole.conf; break;;
         # либо так
 				#localectl set-keymap --no-convert ruwin_alt_sh-UTF-8
