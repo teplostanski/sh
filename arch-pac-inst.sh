@@ -58,7 +58,12 @@ echo "┌───────────────────────�
 echo "│                                УСТАНОВКА ПАКЕТОВ                            │"
 echo "└─────────────────────────────────────────────────────────────────────────────┘"
 pacman -S --needed base-devel yajl
-sudo pacman -S -y ukui-power-manager --noconfirm
+sudo pacman -S lrzip --noconfirm
+sudo pacman -S squashfs-tools --noconfirm
+sudo pacman -S pcmanfm-gtk3 --noconfirm
+# gvfs нужен для монтирования фс и флэшек
+sudo pacman -S gvfs --noconfirm
+sudo pacman -S ukui-power-manager --noconfirm
 sudo pacman -S mc --noconfirm
 sudo pacman -S micro --noconfirm
 sudo pacman -S nautilus --noconfirm
