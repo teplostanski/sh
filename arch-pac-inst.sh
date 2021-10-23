@@ -63,6 +63,9 @@ sudo pacman -S squashfs-tools --noconfirm
 sudo pacman -S pcmanfm-gtk3 --noconfirm
 # gvfs нужен для монтирования фс и флэшек
 sudo pacman -S gvfs --noconfirm
+#xdg-user-dirs - это инструмент, помогающий управлять пользовательскими каталогами, такими как папка рабочего стола и папка с музыкой
+#https://wiki.archlinux.org/title/XDG_user_directories_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
+sudo pacman -S xdg-user-dirs --noconfirm
 sudo pacman -S ukui-power-manager --noconfirm
 sudo pacman -S mc --noconfirm
 sudo pacman -S micro --noconfirm
